@@ -29,7 +29,7 @@
                 <form id="product_form">
                     <div class="form-group">
                         <label class="alignLabel" for="sku">SKU</label>
-                        <input type="text"  id="sku" placeholder="Enter SKU">
+                        <input type="text"  id="sku" placeholder="SKU">
                     </div>
                     <div class="form-group">
                         <label class="alignLabel" for="name">Name</label>
