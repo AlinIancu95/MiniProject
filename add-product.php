@@ -14,9 +14,9 @@
                         </a>
                     </div>
                     <div class="col-1">
-                        <button class="btn btn-primary">
+                        <a href="index.php" class="btn btn-primary">
                             Cancel
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -42,12 +42,13 @@
                     <div class="form-group">
                         <label for="productType">Type Switcher</label>
                         <select  name="productType" id="productType">
+                            <option value="none">Select Type</option>
                             <option value="dvds">DVD</option>
                             <option value="books">Book</option>
                             <option value="furnitures">Furniture</option>
                         </select>
                     </div>
-                    <div class="typeDVD">
+                    <div class="typeDVD divSelected" style="display:none" id="dvds">
                         <div class="form-group">
                             <label for="size">Size (MB) </label>
                             <input type="text" id="size" placeholder="Size" aria-describedby="sizeHelpBlock">
@@ -56,7 +57,7 @@
                             </small>
                         </div>
                     </div>
-                    <div class="typeBook">
+                    <div class="typeBook divSelected" style="display:none" id="books">
                         <div class="form-group">
                             <label for="weight">Weight (KG) </label>
                             <input type="text" id="weight" placeholder="Weight" aria-describedby="sizeHelpBlock">
@@ -65,7 +66,7 @@
                             </small>
                         </div>
                     </div>
-                    <div class="typeFurniture">
+                    <div class="typeFurniture divSelected" style="display:none" id="furnitures">
                         <div class="form-group">
                             <label for="height">Height (CM) </label>
                             <input type="text" id="height" placeholder="Height" aria-describedby="sizeHelpBlock">
@@ -87,3 +88,12 @@
     </div>
 </body>
 </html>
+
+<script>
+    $(function() {
+        $('#productType').change(function(){
+            $('.divSelected').hide();
+            $('#' + $(this).val()).show();
+        });
+    });
+</script>

@@ -116,6 +116,13 @@
                             </div>
                         </div>
                     </div>
+                    <?php
+                    $newProductIds = query('SELECT id FROM products ORDER BY id');
+                    foreach ($newProductIds as $newProductId){
+                        $product = new Product($newProductId['id']);
+                        $product->cardProduct();
+                    }
+                    ?>
                 </div>
             </div>
         </div>
