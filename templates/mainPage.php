@@ -2,13 +2,13 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 headMainPage">
+            <div class="col-12 headPages">
                 <div class="row">
                     <div class="col-9">
                         <h3>Product List</h3>
                     </div>
                     <div class="col-1">
-                        <a href="#" class="btn btn-primary">
+                        <a href="../MiniProject/add-product.php" class="btn btn-primary">
                             ADD
                         </a>
                     </div>
@@ -24,13 +24,14 @@
             <div class="col"><hr></div>
         </div>
         <div class="row">
-            <div class="col bodyMainPage">
+            <div class="col bodyPages">
                 <div class="row">
                     <div class="col-3">
                         <div class="card cardMain">
                             <div>
-                                <label></label>
-                                <input type="checkbox" class="delete-checkbox">
+                                <label>
+                                    <input type="checkbox" class="delete-checkbox">
+                                </label>
                             </div>
                             <div class="card-body cardBody">
                                 <span>SKU</span>
@@ -46,8 +47,9 @@
                     <div class="col-3">
                         <div class="card cardMain">
                             <div>
-                                <label></label>
-                                <input type="checkbox" class="delete-checkbox">
+                                <label>
+                                    <input type="checkbox" class="delete-checkbox">
+                                </label>
                             </div>
                             <div class="card-body cardBody">
                                 <span>SKU</span>
@@ -63,8 +65,9 @@
                     <div class="col-3">
                         <div class="card cardMain">
                             <div>
-                                <label></label>
-                                <input type="checkbox" class="delete-checkbox">
+                                <label>
+                                    <input type="checkbox" class="delete-checkbox">
+                                </label>
                             </div>
                             <div class="card-body cardBody">
                                 <span>SKU</span>
@@ -80,8 +83,9 @@
                     <div class="col-3">
                         <div class="card cardMain">
                             <div>
-                                <label></label>
-                                <input type="checkbox" class="delete-checkbox">
+                                <label>
+                                    <input type="checkbox" class="delete-checkbox">
+                                </label>
                             </div>
                             <div class="card-body cardBody">
                                 <span>SKU</span>
@@ -97,8 +101,9 @@
                     <div class="col-3">
                         <div class="card cardMain">
                             <div>
-                                <label></label>
-                                <input type="checkbox" class="delete-checkbox">
+                                <label>
+                                    <input type="checkbox" class="delete-checkbox">
+                                </label>
                             </div>
                             <div class="card-body cardBody">
                                 <span>SKU</span>
@@ -115,7 +120,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col"><hr></div>
+            <div class="col hrBottom"><hr></div>
         </div>
     </div>
 </body>

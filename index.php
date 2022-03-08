@@ -1,1 +1,1 @@
-<?php include "templates/mainPage.php"?>
+<?php include "templates/mainPage.php";

@@ -1,4 +1,4 @@
-.headMainPage {
+.headPages {
     margin: 40px 0 0 20px;
 }
 
@@ -7,7 +7,12 @@ hr {
     width: 98%;
 }
 
-.bodyMainPage {
+.hrBottom {
+    position: relative;
+    bottom: 0;
+}
+
+.bodyPages {
     margin: 10px 30px 0 30px;
 }
 
@@ -19,9 +24,46 @@ hr {
 .cardBody {
     text-align: center;
     margin: 0 auto 40px;
-    padding-top: 0px;
+    padding-top: 0;
 }
 
 .delete-checkbox {
     margin: 15px 0 0 15px;
+}
+
+.typeDVD {
+    width: 20%;
+    border: 3px solid black;
+    padding: 20px 10px 0 10px;
+    border-radius: 3px;
+    margin: 20px 0;
+}
+
+.typeBook {
+    width: 21%;
+    border: 3px solid black;
+    padding: 20px 10px 0 10px;
+    border-radius: 3px;
+    margin: 20px 0;
+}
+
+.typeFurniture {
+    width: 21%;
+    border: 3px solid black;
+    padding: 20px 10px 0 10px;
+    border-radius: 3px;
+    margin: 20px 0;
+}
+
+.typeFurniture label {
+    padding-bottom: 10px;
+    width: 90px;
+}
+
+.alignLabel {
+    width: 70px;
+}
+
+.addProductBody {
+
 }
