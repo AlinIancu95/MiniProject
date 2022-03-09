@@ -13,9 +13,9 @@
                         </a>
                     </div>
                     <div class="col-2">
-                        <button class="btn btn-primary" id="delete-product-btn">
+                        <a href="../MiniProject/processDeleteProduct.php" class="btn btn-primary" id="delete-product-btn">
                             MASS DELETE
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -101,7 +101,7 @@
                     <div class="col-3">
                         <div class="card cardMain">
                             <div>
-                                <label>
+                                <label class="checkbox">
                                     <input type="checkbox" class="delete-checkbox">
                                 </label>
                             </div>

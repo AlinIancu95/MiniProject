@@ -9,9 +9,9 @@
                         <h3>Product Add</h3>
                     </div>
                     <div class="col-1">
-                        <a href="#" class="btn btn-primary">
+                        <button type="submit" form="product_form" class="btn btn-primary" >
                             Save
-                        </a>
+                        </button>
                     </div>
                     <div class="col-1">
                         <a href="index.php" class="btn btn-primary">
@@ -26,54 +26,57 @@
         </div>
         <div class="row">
             <div class="col-12 bodyPages">
-                <form id="product_form">
+                <form id="product_form" action="processInsertProduct.php" method="post">
                     <div class="form-group">
                         <label class="alignLabel" for="sku">SKU</label>
-                        <input type="text"  id="sku" placeholder="SKU">
+                        <input type="text" name="sku" id="sku" placeholder="SKU">
+                        <span class="error_form" id="sku_error_message"></span>
                     </div>
                     <div class="form-group">
                         <label class="alignLabel" for="name">Name</label>
-                        <input type="text" id="name" placeholder="Name">
+                        <input type="text" name="name" id="name" placeholder="Name">
+                        <span class="error_form" id="name_error_message"></span>
                     </div>
                     <div class="form-group">
                         <label class="alignLabel" for="price">Price ($) </label>
-                        <input type="text" id="price" placeholder="Price">
+                        <input type="text" name="price" id="price" placeholder="Price">
+                        <span class="error_form" id="price_error_message"></span>
                     </div>
                     <div class="form-group">
                         <label for="productType">Type Switcher</label>
                         <select  name="productType" id="productType">
-                            <option value="none">Select Type</option>
-                            <option value="dvds">DVD</option>
-                            <option value="books">Book</option>
-                            <option value="furnitures">Furniture</option>
+                            <option value="None">Select Type</option>
+                            <option value="DVD">DVD</option>
+                            <option value="Book">Book</option>
+                            <option value="Furniture">Furniture</option>
                         </select>
                     </div>
-                    <div class="typeDVD divSelected" style="display:none" id="dvds">
+                    <div class="typeDVD divSelected" style="display:none" id="DVD">
                         <div class="form-group">
                             <label for="size">Size (MB) </label>
-                            <input type="text" id="size" placeholder="Size" aria-describedby="sizeHelpBlock">
+                            <input type="text" name="size" id="size" placeholder="Size" aria-describedby="sizeHelpBlock">
                             <small id="sizeHelpBlock" class="form-text text-muted">
                                 Please, provide size (MB)
                             </small>
                         </div>
                     </div>
-                    <div class="typeBook divSelected" style="display:none" id="books">
+                    <div class="typeBook divSelected" style="display:none" id="Book">
                         <div class="form-group">
                             <label for="weight">Weight (KG) </label>
-                            <input type="text" id="weight" placeholder="Weight" aria-describedby="sizeHelpBlock">
+                            <input type="text" name="weight" id="weight" placeholder="Weight" aria-describedby="sizeHelpBlock">
                             <small id="sizeHelpBlock" class="form-text text-muted">
                                 Please, provide weight (KG)
                             </small>
                         </div>
                     </div>
-                    <div class="typeFurniture divSelected" style="display:none" id="furnitures">
+                    <div class="typeFurniture divSelected" style="display:none" id="Furniture">
                         <div class="form-group">
                             <label for="height">Height (CM) </label>
-                            <input type="text" id="height" placeholder="Height" aria-describedby="sizeHelpBlock">
+                            <input type="text" name="height" id="height" placeholder="Height" aria-describedby="sizeHelpBlock">
                             <label for="witdh">Witdh (CM) </label>
-                            <input type="text" id="witdh" placeholder="Witdh" aria-describedby="sizeHelpBlock">
+                            <input type="text" name="width" id="witdh" placeholder="Witdh" aria-describedby="sizeHelpBlock">
                             <label for="length">Length (CM) </label>
-                            <input type="text" id="length" placeholder="Length" aria-describedby="sizeHelpBlock">
+                            <input type="text" name="length" id="length" placeholder="Length" aria-describedby="sizeHelpBlock">
                             <small id="sizeHelpBlock" class="form-text text-muted">
                                 Please provide dimensions in HxWxL format
                             </small>
@@ -96,4 +99,6 @@
             $('#' + $(this).val()).show();
         });
     });
+
+
 </script>

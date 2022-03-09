@@ -2,6 +2,12 @@
 
 class Furniture extends Base
 {
+    public $sku;
+
+    public $name;
+
+    public $price;
+
     public $height;
 
     public $witdh;
