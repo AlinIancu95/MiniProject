@@ -13,9 +13,9 @@
                         </a>
                     </div>
                     <div class="col-2">
-                        <a href="../MiniProject/processDeleteProduct.php" class="btn btn-primary" id="delete-product-btn">
+                        <button type="submit" form="formDeleteProduct" class="btn btn-primary" id="delete-product-btn">
                             MASS DELETE
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -26,108 +26,37 @@
         <div class="row">
             <div class="col bodyPages">
                 <div class="row">
-                    <div class="col-3">
-                        <div class="card cardMain">
-                            <div>
-                                <label>
-                                    <input type="checkbox" class="delete-checkbox">
-                                </label>
-                            </div>
-                            <div class="card-body cardBody">
-                                <span>SKU</span>
-                                <br>
-                                <span>Name</span>
-                                <br>
-                                <span>Price</span>
-                                <br>
-                                <span>Type</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card cardMain">
-                            <div>
-                                <label>
-                                    <input type="checkbox" class="delete-checkbox">
-                                </label>
-                            </div>
-                            <div class="card-body cardBody">
-                                <span>SKU</span>
-                                <br>
-                                <span>Name</span>
-                                <br>
-                                <span>Price</span>
-                                <br>
-                                <span>Type</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card cardMain">
-                            <div>
-                                <label>
-                                    <input type="checkbox" class="delete-checkbox">
-                                </label>
-                            </div>
-                            <div class="card-body cardBody">
-                                <span>SKU</span>
-                                <br>
-                                <span>Name</span>
-                                <br>
-                                <span>Price</span>
-                                <br>
-                                <span>Type</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card cardMain">
-                            <div>
-                                <label>
-                                    <input type="checkbox" class="delete-checkbox">
-                                </label>
-                            </div>
-                            <div class="card-body cardBody">
-                                <span>SKU</span>
-                                <br>
-                                <span>Name</span>
-                                <br>
-                                <span>Price</span>
-                                <br>
-                                <span>Type</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card cardMain">
-                            <div>
-                                <label class="checkbox">
-                                    <input type="checkbox" class="delete-checkbox">
-                                </label>
-                            </div>
-                            <div class="card-body cardBody">
-                                <span>SKU</span>
-                                <br>
-                                <span>Name</span>
-                                <br>
-                                <span>Price</span>
-                                <br>
-                                <span>Type</span>
-                            </div>
-                        </div>
-                    </div>
                     <?php
-                    $newProductIds = query('SELECT id FROM products ORDER BY id');
-                    foreach ($newProductIds as $newProductId){
-                        $product = new Product($newProductId['id']);
+                    $arrayDVDs = Dvd::findAll();
+                    $arrayBooks = Book::findAll();
+                    $arrayFurnitures = Furniture::findAll();
+                    $productArray = array_merge($arrayDVDs, $arrayBooks, $arrayFurnitures);
+
+                    function sortFunction($a, $b)
+                    {
+                        if ($a->getId() == $b->getId() ){
+                            return 0;
+                    }
+                        return ($a->getId() < $b->getId()) ? -1 : 1;
+                    }
+
+                    usort($productArray, 'sortFunction');
+                    echo '<form action="processDeleteProduct.php" method="post" id="formDeleteProduct" class="row">';
+                    foreach ($productArray as $product){
                         $product->cardProduct();
                     }
+                    echo '</form>';
                     ?>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col hrBottom"><hr></div>
+        </div>
+        <div class="row">
+            <div class="col footerText" >
+                Scandiweb Test assignment
+            </div>
         </div>
     </div>
 </body>

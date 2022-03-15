@@ -9,7 +9,7 @@
                         <h3>Product Add</h3>
                     </div>
                     <div class="col-1">
-                        <button type="submit" form="product_form" class="btn btn-primary" >
+                        <button type="submit" form="product_form" class="btn btn-primary">
                             Save
                         </button>
                     </div>
@@ -30,17 +30,14 @@
                     <div class="form-group">
                         <label class="alignLabel" for="sku">SKU</label>
                         <input type="text" name="sku" id="sku" placeholder="SKU">
-                        <span class="error_form" id="sku_error_message"></span>
                     </div>
                     <div class="form-group">
                         <label class="alignLabel" for="name">Name</label>
                         <input type="text" name="name" id="name" placeholder="Name">
-                        <span class="error_form" id="name_error_message"></span>
                     </div>
                     <div class="form-group">
                         <label class="alignLabel" for="price">Price ($) </label>
                         <input type="text" name="price" id="price" placeholder="Price">
-                        <span class="error_form" id="price_error_message"></span>
                     </div>
                     <div class="form-group">
                         <label for="productType">Type Switcher</label>
@@ -87,6 +84,11 @@
         </div>
         <div class="row">
             <div class="col hrBottom"><hr></div>
+        </div>
+        <div class="row">
+            <div class="col footerText" >
+                Scandiweb Test assignment
+            </div>
         </div>
     </div>
 </body>
