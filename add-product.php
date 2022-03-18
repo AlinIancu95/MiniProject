@@ -9,7 +9,7 @@
                         <h3>Product Add</h3>
                     </div>
                     <div class="col-1">
-                        <button type="submit" form="product_form" class="btn btn-primary">
+                        <button type="submit" form="product_form" class="btn btn-primary" id="saveBtn">
                             Save
                         </button>
                     </div>
@@ -26,10 +26,11 @@
         </div>
         <div class="row">
             <div class="col-12 bodyPages">
-                <form id="product_form" action="processInsertProduct.php" method="post">
+                <form id="product_form"  method="post">
                     <div class="form-group">
                         <label class="alignLabel" for="sku">SKU</label>
                         <input type="text" name="sku" id="sku" placeholder="SKU">
+                        <div id="nameMsg" style="color: red; display: none">Sku needs to be between 3 and 10 characters</div>
                     </div>
                     <div class="form-group">
                         <label class="alignLabel" for="name">Name</label>
@@ -41,7 +42,7 @@
                     </div>
                     <div class="form-group">
                         <label for="productType">Type Switcher</label>
-                        <select  name="productType" id="productType">
+                        <select name="productType" id="productType">
                             <option value="None">Select Type</option>
                             <option value="DVD">DVD</option>
                             <option value="Book">Book</option>
@@ -94,13 +95,4 @@
 </body>
 </html>
 
-<script>
-    $(function() {
-        $('#productType').change(function(){
-            $('.divSelected').hide();
-            $('#' + $(this).val()).show();
-        });
-    });
-
-
-</script>
+<script type="text/javascript" src="addproduct.js"></script>
