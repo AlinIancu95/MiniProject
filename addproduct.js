@@ -35,36 +35,5 @@ $(document).ready(function () {
                 return false;
             }
         });
-        var price = $('#price').val();
-        var size = $('#size').val();
-        var weight = $('#weight').val();
-        var height = $('#height').val();
-        var witdh = $('#witdh').val();
-        var length = $('#length').val();
-        var typeSelectedValue = $('#productType :selected').val();
-        if(isNaN(parseFloat(price))) {
-            alert('Please, provide the data of indicated type');
-            return false;
-        } else {
-            $('#product_form').attr('action', 'processInsertProduct.php');
-        }
-        if(typeSelectedValue == 'DVD' && isNaN(parseFloat(size))) {
-            alert('Please, provide the data of indicated type');
-            return false;
-        } else {
-            $('#product_form').attr('action', 'processInsertProduct.php');
-        }
-        if(typeSelectedValue == 'Book' && isNaN(parseFloat(weight))) {
-            alert('Please, provide the data of indicated type');
-            return false;
-        } else {
-            $('#product_form').attr('action', 'processInsertProduct.php');
-        }
-        if(typeSelectedValue == 'Furniture' && (isNaN(parseFloat(height)) || isNaN(parseFloat(witdh)) || isNaN(parseFloat(length))) ) {
-            alert('Please, provide the data of indicated type');
-            return false;
-        } else {
-            $('#product_form').attr('action', 'processInsertProduct.php');
-        }
     });
 });
