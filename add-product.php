@@ -26,11 +26,10 @@
         </div>
         <div class="row">
             <div class="col-12 bodyPages">
-                <form id="product_form"  method="post">
+                <form id="product_form" action="processInsertProduct.php"  method="post">
                     <div class="form-group">
                         <label class="alignLabel" for="sku">SKU</label>
                         <input type="text" name="sku" id="sku" placeholder="SKU">
-                        <div id="nameMsg" style="color: red; display: none">Sku needs to be between 3 and 10 characters</div>
                     </div>
                     <div class="form-group">
                         <label class="alignLabel" for="name">Name</label>
@@ -38,7 +37,7 @@
                     </div>
                     <div class="form-group">
                         <label class="alignLabel" for="price">Price ($) </label>
-                        <input type="text" name="price" id="price" placeholder="Price">
+                        <input type="number" name="price" id="price" placeholder="Price">
                     </div>
                     <div class="form-group">
                         <label for="productType">Type Switcher</label>
@@ -52,7 +51,7 @@
                     <div class="typeDVD divSelected" style="display:none" id="DVD">
                         <div class="form-group">
                             <label for="size">Size (MB) </label>
-                            <input type="text" name="size" id="size" placeholder="Size" aria-describedby="sizeHelpBlock">
+                            <input type="number" name="size" id="size" placeholder="Size" aria-describedby="sizeHelpBlock">
                             <small id="sizeHelpBlock" class="form-text text-muted">
                                 Please, provide size (MB)
                             </small>
@@ -61,7 +60,7 @@
                     <div class="typeBook divSelected" style="display:none" id="Book">
                         <div class="form-group">
                             <label for="weight">Weight (KG) </label>
-                            <input type="text" name="weight" id="weight" placeholder="Weight" aria-describedby="sizeHelpBlock">
+                            <input type="number" name="weight" id="weight" placeholder="Weight" aria-describedby="sizeHelpBlock">
                             <small id="sizeHelpBlock" class="form-text text-muted">
                                 Please, provide weight (KG)
                             </small>
@@ -70,11 +69,11 @@
                     <div class="typeFurniture divSelected" style="display:none" id="Furniture">
                         <div class="form-group">
                             <label for="height">Height (CM) </label>
-                            <input type="text" name="height" id="height" placeholder="Height" aria-describedby="sizeHelpBlock">
+                            <input type="number" name="height" id="height" placeholder="Height" aria-describedby="sizeHelpBlock">
                             <label for="witdh">Witdh (CM) </label>
-                            <input type="text" name="width" id="witdh" placeholder="Witdh" aria-describedby="sizeHelpBlock">
+                            <input type="number" name="width" id="witdh" placeholder="Witdh" aria-describedby="sizeHelpBlock">
                             <label for="length">Length (CM) </label>
-                            <input type="text" name="length" id="length" placeholder="Length" aria-describedby="sizeHelpBlock">
+                            <input type="number" name="length" id="length" placeholder="Length" aria-describedby="sizeHelpBlock">
                             <small id="sizeHelpBlock" class="form-text text-muted">
                                 Please provide dimensions in HxWxL format
                             </small>
